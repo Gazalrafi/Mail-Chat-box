@@ -1,0 +1,10 @@
+.SideBar {
+}
+
+@media (max-width: 650px) {
+  .composeButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}

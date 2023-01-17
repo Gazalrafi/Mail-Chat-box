@@ -1,0 +1,45 @@
+.ComposeEmail {
+}
+
+.headerContainer {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.receiverMail input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid grey;
+  padding-bottom: 10px;
+}
+
+.subject input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid grey;
+  padding-bottom: 10px;
+}
+
+.editorBox {
+  height: max-content;
+}
+
+.sendContainer {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.sendContainer button {
+  padding: 8px 14px;
+  background: #188fff;
+  border: none;
+  color: white;
+  font-size: 22px;
+  border-radius: 10px;
+}

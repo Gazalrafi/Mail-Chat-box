@@ -1,0 +1,23 @@
+.SingleMailInbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 80vh;
+}
+.subject {
+  font-weight: bold;
+  font-size: 26px;
+}
+.from {
+  font-weight: bold;
+  font-size: 26px;
+}
+.message {
+  font-weight: bold;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
