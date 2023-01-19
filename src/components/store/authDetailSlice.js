@@ -16,11 +16,9 @@ const authDetailSlice = createSlice({
             state.isLoggedIn = true;
         },
 
-        toggleButtons() {
+        // toggleButtons() {
 
-        }
-
-
+        // }
 
     }
 })

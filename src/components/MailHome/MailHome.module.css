@@ -11,8 +11,7 @@
 .SideBar button {
   width: 100px;
 }
-.composeButton {
-}
+
 
 .AllEmails {
   border-left: 1px solid black;
@@ -32,6 +31,7 @@
   gap: 30px;
   border-bottom: 1px solid rgb(200, 154, 154);
   align-items: center;
+
 }
 
 .SingleEmailBox:hover {
@@ -61,13 +61,13 @@
 }
 
 .dltbtn {
-  background-color: red;
+  background-color: rgb(242, 72, 72);
 }
 
 .newMessage {
   height: 12px;
   width: 12px;
-  background-color: rgb(61, 25, 226);
+  background-color: rgb(12, 11, 12);
   border-radius: 50%;
   display: inline-block;
   animation: fade 2s infinite;
@@ -79,6 +79,12 @@
 
 .deletebtnContainer {
   margin-left: auto;
+}
+.message{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 500px;
 }
 
 @keyframes fade {

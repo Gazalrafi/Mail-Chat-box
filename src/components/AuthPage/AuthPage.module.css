@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   height: 100vh;
 }
 
@@ -17,7 +16,7 @@
 
   width: 250px;
   display: flex;
-
+  background-color: burlywood;
   padding: 30px;
   flex-direction: column;
   border: 1px solid black;
@@ -27,6 +26,7 @@
 }
 
 .form input {
+ 
   border: 1px solid black;
   border-radius: 6px;
   padding: 10px;
@@ -38,8 +38,6 @@
   flex-direction: column;
 }
 
-.textFields {
-}
 .signupContainer {
   display: flex;
   justify-content: center;
@@ -47,7 +45,7 @@
 }
 
 .signupButton {
-  background-color: rgb(100, 100, 221);
+  background-color: rgb(5, 5, 5);
   color: white;
   font-size: 18px;
   font-weight: bold;
@@ -61,6 +59,7 @@
   margin: 10px;
   width: 280px;
   padding: 10px 15px;
+  background-color: #0a0a0a;
 }
 
 @keyframes shake {
@@ -101,6 +100,7 @@
   font-weight: bold;
   text-align: center;
   border: none;
+  background-color: black;
 }
 .forgetButton:hover {
   cursor: pointer;
@@ -110,7 +110,7 @@
 .loader {
   border: 16px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 16px solid #3498db;
+  border-top: 16px solid #0a0a0a;
   width: 50px;
   height: 50px;
   -webkit-animation: spin 2s linear infinite; /* Safari */

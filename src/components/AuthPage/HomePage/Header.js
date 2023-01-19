@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 const Header = () => {
     const navigate = useNavigate()
 
-    const email = localStorage.getItem('originalEmail')
+    const email = localStorage.getItem('originalEmail');
 
     function logoutHandler() {
         localStorage.removeItem('senderEmail')
@@ -19,7 +19,7 @@ const Header = () => {
 
     return (
         <div className={classes.Header}>
-            <div className={classes.mailTitle}><h1>Yahoo Mail </h1></div>
+            <div className={classes.mailTitle}><h1> E-Mail </h1></div>
             <div>
                 <button onClick={logoutHandler}>Logout</button>
             </div>

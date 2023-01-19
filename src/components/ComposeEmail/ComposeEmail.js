@@ -16,7 +16,7 @@ const ComposeEmail = () => {
 
     const config = {
         placeholder: "Enter Email",
-        buttons: ["bold", "italic", "underline", "link", "unlink", "source"]
+        buttons: ["bold", "italic", "underline", "link", "unlink", "source","image"]
     }
 
     async function sendEmailHandler() {
@@ -50,7 +50,6 @@ const ComposeEmail = () => {
         if (!resp.ok) {
             console.log('error');
 
-
         }
 
         else {
@@ -83,20 +82,16 @@ const ComposeEmail = () => {
             }
 
         }
-
-
-
-
     }
 
     return (
         <div className={classes.ComposeEmail}>
             <div className={classes.headerContainer}>
                 <div className={classes.receiverMail}>
-                    <input type='email' ref={emailRef} placeholder='adbc@gmail.com' />
+                    <input type='email' ref={emailRef} placeholder='To' />
                 </div>
                 <div className={classes.subject}>
-                    <input ref={subjectRef} type='text' placeholder='Test mail' />
+                    <input ref={subjectRef} type='text' placeholder='Subject' />
 
                 </div>
             </div>
@@ -105,7 +100,6 @@ const ComposeEmail = () => {
                     ref={textRef}
                     value={content}
                     config={config}
-
                     tabIndex={1} // tabIndex of textarea
                     onBlur={newContent => setContent(newContent)}
                     onChange={newContent => { }}

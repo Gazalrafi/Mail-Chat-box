@@ -31,4 +31,4 @@ const SingleMailInbox = (props) => {
     )
 }
 
-export default SingleMailInbox
+export default SingleMailInbox;

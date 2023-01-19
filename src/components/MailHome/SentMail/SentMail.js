@@ -15,10 +15,7 @@ const SentMail = () => {
     const sortByLatest = [...sentData].reverse()
     const endpoint = localStorage.getItem('senderEmail');
 
-
     console.log('hello');
-
-
 
     async function getSentData() {
         const endpoint = localStorage.getItem('senderEmail');
@@ -40,9 +37,6 @@ const SentMail = () => {
 
 
             })
-
-
-
         }
 
         dispatch(mailDataAction.getoutBoxData(outboxData))
@@ -61,11 +55,9 @@ const SentMail = () => {
 
     function singleMailHandler(mail) {
         // console.log(mail);
-
-
-
         navigate('/single', { state: mail })
     }
+    
 
     function deleteHanlder(id) {
         // console.log(id);
@@ -85,18 +77,15 @@ const SentMail = () => {
             {sortByLatest.map(item => {
                 return (
                     <div key={item.senderId} className={classes.SingleEmailBox}>
-
+                    
                         <div onClick={() => { singleMailHandler(item) }} className={classes.emailSubject}> {item.subject}</div>
-                        <div className={classes.emailDescription}>{item.message}</div>
-                        <div className={classes.deletebtnContainer}><button onClick={() => { deleteHanlder(item.senderId) }} className={classes.dltbtn}>Delete</button></div>
+                        <div onClick={() => { singleMailHandler(item) }} className={classes.emailDescription}>{item.message}</div>
+                        <div  className={classes.deletebtnContainer}><button onClick={() => { deleteHanlder(item.senderId) }} className={classes.dltbtn}>Delete</button></div>
 
 
                     </div>
                 )
             })}
-
-
-
 
         </div>
     )

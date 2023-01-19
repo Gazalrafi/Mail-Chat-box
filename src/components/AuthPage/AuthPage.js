@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react'
 import classes from './AuthPage.module.css'
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,NavLink } from 'react-router-dom'
 
 import { useDispatch, useSelector } from 'react-redux';
 import { authDetailSliceAction } from '../store/authDetailSlice';
+
 
 const AuthPage = () => {
     const navigate = useNavigate();
@@ -36,7 +36,7 @@ const AuthPage = () => {
 
         if (isSignupScreen && (password !== confirmPasswordRef.current.value)) {
             setErrorClass(`${classes.error}`);
-            setError('Password and Confirm Password not are same')
+            setError('Password and Confirm Password are not same')
             return;
 
         }
@@ -61,7 +61,6 @@ const AuthPage = () => {
             }
         })
 
-
         if (response.ok) {
             console.log('hello');
             const data = await response.json()
@@ -71,14 +70,11 @@ const AuthPage = () => {
 
             const email = `${myemail.replace(/\.|@/g, '')}`
 
-
             localStorage.setItem('senderEmail', email)
 
 
             localStorage.setItem('token', token)
             // confirmEmail()
-
-
             // navigate('/confirm')
             // dispatch(authActions.login(token))
 
@@ -97,22 +93,11 @@ const AuthPage = () => {
 
 
         }
-
-
-
-
-
-
-
-
     }
-
 
     function toggleSignup() {
         setError('')
         setIsSignupScreen(prevValue => !prevValue)
-
-
     }
     return (
 
@@ -131,19 +116,15 @@ const AuthPage = () => {
                     </div>
 
                     <div className={classes.forgetButtonContainer}>
-                        <button onClick={() => {
-                            // navigate('/forgot-password')
-                        }} className={classes.forgetButton}>Forget Password?</button>
+                        <NavLink to='/forget'>forget password?</NavLink>
                     </div>
 
                     <p style={{ color: 'red', fontWeight: 'bold', textAlign: 'center' }}> {error}</p>
 
-
-
                 </div>
             </form>
 
-            <button onClick={toggleSignup} className={classes.loginButton}>{isSignupScreen ? 'Have an Account? Login' : 'Dont have an Acoount? Sign up'}</button>
+            <button onClick={toggleSignup} className={classes.loginButton}>{isSignupScreen ? 'Have an Account? Login' : 'Dont have an Account? Sign up'}</button>
             {spinner && <div className={classes.loader}></div>}
 
 

@@ -1,5 +1,4 @@
-.ComposeEmail {
-}
+
 
 .headerContainer {
   margin: 10px;
@@ -37,7 +36,7 @@
 
 .sendContainer button {
   padding: 8px 14px;
-  background: #188fff;
+  background: #080808;
   border: none;
   color: white;
   font-size: 22px;

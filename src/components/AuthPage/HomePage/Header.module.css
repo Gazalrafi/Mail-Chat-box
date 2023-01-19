@@ -4,9 +4,10 @@
   align-items: center;
   border-bottom: 1px solid black;
   padding: 0 10px;
-  background-color: rgb(130, 130, 232);
+  background-color: burlywood;
+  
 }
 .mailTitle h1 {
   font-size: 25px;
-  color: white;
+  color:Black;
 }

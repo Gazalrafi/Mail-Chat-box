@@ -26,8 +26,6 @@ const mailDataSlice = createSlice({
 
             // console.log(state.inboxData.senderId);
 
-
-
         },
 
         deleteFromOutbox(state, action) {

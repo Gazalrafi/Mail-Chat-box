@@ -1,26 +1,19 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import AuthPage from './components/AuthPage/AuthPage'
-import HomePage from './components/AuthPage/HomePage/HomePage'
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import ComposeEmail from './components/ComposeEmail/ComposeEmail'
 import MailHome from './components/MailHome/MailHome'
 import SentMail from './components/MailHome/SentMail/SentMail'
-import { mailDataAction } from './components/store/maildataSlice'
-import { useDispatch, useSelector } from 'react-redux'
-import axios from 'axios'
+import { useSelector } from 'react-redux'
 import SingleMailInbox from './components/MailHome/SingleMailInbox/SingleMailInbox'
+import ForgetPassword from './components/AuthPage/ForgetPassword'
 
 const App = () => {
-  const endpoint = localStorage.getItem('senderEmail');
-  const Data = useSelector(state => state.mailData.inboxData)
+  // const endpoint = localStorage.getItem('senderEmail');
+  // const Data = useSelector(state => state.mailData.inboxData)
 
   const rdxLoggedIn = useSelector(state => state.auth.isLoggedIn)
   const [isLoggedIn, setisLoggedIn] = useState(rdxLoggedIn);
-
-
-
-  const dispatch = useDispatch();
-
 
   return (
     <Fragment>
@@ -32,9 +25,8 @@ const App = () => {
           <Route path='/compose' element={<ComposeEmail />} />
           <Route path='/sentmail' element={<SentMail />} />
           <Route path='/single' element={<SingleMailInbox />} />
-
+          {!isLoggedIn &&<Route path='/forget' element={<ForgetPassword/>}/>}
           <Route path="*" element={<Navigate to='/auth' replace />} />
-
 
         </Routes>
       </BrowserRouter>

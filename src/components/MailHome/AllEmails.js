@@ -44,27 +44,19 @@ const AllEmails = (props) => {
 
                     // console.log(inboxData[0].isRead);
 
-
                 }
 
                 dispatch(mailDataAction.getInboxData(inboxData))
                 dispatch(mailDataAction.getTotalUnreadMsg(inboxData))
 
-
             })
 
-
-
-        }, 1000)
+        }, 10)
 
         // getInboxData()
         // console.log('hello');
         return () => clearInterval(getInboxData);
     }, [dispatch])
-
-
-
-
 
 
     function mailHandler(mail) {
@@ -74,8 +66,6 @@ const AllEmails = (props) => {
             return;
 
         }
-
-
         axios.put(`https://new-project-10d5a-default-rtdb.firebaseio.com/emailData/${endpoint}/received/${mail.senderId}.json`, {
             email: mail.email,
             message: mail.message,

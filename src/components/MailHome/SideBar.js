@@ -3,12 +3,12 @@ import classes from './SideBar.module.css'
 
 
 import React from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 
 const SideBar = (props) => {
-    const navigate = useNavigate()
+
     const unreadNumber = useSelector(state => state.mailData.Totalunreadmsg)
 
 
@@ -24,7 +24,7 @@ const SideBar = (props) => {
         <div className={classes.SideBar}>
             <div className={classes.composeButton}
             >
-                <div><button onClick={inboxBtnHandler} style={{ backgroundColor: 'blue' }}>Inbox {unreadNumber}</button>
+                <div><button onClick={inboxBtnHandler} style={{ backgroundColor: 'black' }}>Inbox {unreadNumber}</button>
                 </div>
                 <div>
                     <NavLink to='/compose'>
